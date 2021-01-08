@@ -29,6 +29,8 @@ def echo(update, context):
 def price(update,context):
     """Look ticker and response with the last price"""
 
+    logger.info('Enviando info')
+
     url = "https://min-api.cryptocompare.com/data/pricemultifull?fsyms=BTC&tsyms=USD&extraParams=df71225ed499c20238ddaa414b70c730d6638bc6b482a08c0b25e3101658ae31"
     r = requests.get(url)
     js = r.json()
